@@ -31,14 +31,16 @@ export default class StyledTextArea extends React.Component<StyledTextAreaProps,
     render() {
         const { isError, ...otherProps } = this.props;
         const className = isError ? TEXTAREA_ERROR_CLASS : "";
-        return <textarea style={{
-            "width": "95%",
-            "height": "200px",
-            "backgroundColor": "#1e1e1e",
-            "color":"white",
-            "borderRadius":"5px",
-            "padding":"10px",
-            "resize": "none"
-        }} {...otherProps} value={undefined} className={className} />;
+        return <textarea
+            spellCheck="false"
+            style={{
+                "width": "95%",
+                "height": "200px",
+                "backgroundColor": "#1e1e1e",
+                "color": "#00ff41",
+                "borderRadius": "5px",
+                "padding": "10px",
+                "resize": "none"
+            }} {...otherProps} value={undefined} className={className} />;
     }
 }

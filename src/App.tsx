@@ -129,15 +129,15 @@ export default class App extends React.Component<AppProps, AppState> {
                     "flexDirection": "row",
                     "flexWrap": "nowrap",
                     "justifyContent": "space-between",
-                    "paddingLeft":"5px",
-                    "paddingRight":"5px",
+                    "paddingLeft": "7px",
+                    "paddingRight": "7px",
                 }}>
                     <div>CSS:</div>
                     <div style={{
                         "WebkitUserSelect": "none",
                         "userSelect": "none",
-                        "cursor":"pointer"
-                    }} onClick={()=>{
+                        "cursor": "pointer"
+                    }} onClick={() => {
                         window.navigator['clipboard'].writeText(inputText);
                     }}>Copy</div>
                 </div>
@@ -153,15 +153,15 @@ export default class App extends React.Component<AppProps, AppState> {
                     "flexDirection": "row",
                     "flexWrap": "nowrap",
                     "justifyContent": "space-between",
-                    "paddingLeft":"5px",
-                    "paddingRight":"5px",
+                    "paddingLeft": "7px",
+                    "paddingRight": "7px",
                 }}>
                     <div>React in-line style:</div>
                     <div style={{
                         "WebkitUserSelect": "none",
                         "userSelect": "none",
-                        "cursor":"pointer"
-                    }} onClick={()=>{
+                        "cursor": "pointer"
+                    }} onClick={() => {
                         window.navigator['clipboard'].writeText(outputText);
                     }}
                     >Copy</div>
@@ -178,6 +178,7 @@ export default class App extends React.Component<AppProps, AppState> {
                     inputText.length != 0 && <div >
                         <div style={{ "paddingTop": "10px" }}></div>
                         <button style={{
+                            "cursor": "pointer",
                             "backgroundColor": "#2e2e2e",
                             "border": "none",
                             "color": "white",
@@ -186,13 +187,14 @@ export default class App extends React.Component<AppProps, AppState> {
                             "display": "inline-block",
                             "fontSize": "16px",
                             "width": "100px",
-                            "height": "30px"
+                            "paddingTop": "6px",
+                            "paddingBottom": "6px",
                         }} onClick={() => {
                             this.inputTextUpdate({ target: { value: '' } });
                             this.outputTextUpdate({ target: { value: '' } });
                         }}
                         >Clear</button>
-                        <br /><div style={{ "paddingTop": "10px" }}></div>
+                        <div style={{ "paddingLeft": "10px", "display": "inline" }}></div>
                         <input
                             id="checkbox-format"
                             className="checkbox-format"
@@ -202,6 +204,7 @@ export default class App extends React.Component<AppProps, AppState> {
                             style={{ "display": "none" }}
                         />
                         <label htmlFor="checkbox-format" style={{
+                            "cursor": "pointer",
                             "backgroundColor": "#2e2e2e",
                             "border": "none",
                             "color": "white",
@@ -210,8 +213,8 @@ export default class App extends React.Component<AppProps, AppState> {
                             "display": "inline-block",
                             "fontSize": "16px",
                             "width": "100px",
-                            "height": "30px",
                             "paddingTop": "3px",
+                            "paddingBottom": "3px",
                             "WebkitUserSelect": "none",
                             "userSelect": "none"
                         }}>Format</label>
